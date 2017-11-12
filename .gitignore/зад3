@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    float x, y;
+    int num_in_switch;
+    float t;
+   printf("Enter x= ");
+   scanf("%f", &x);
+   printf("Enter y= ");
+   scanf("%f", &y);
+
+
+   printf("1.Way_1: with condition IF\n");
+    printf("2.Way_2: with condition IF and variable\n");
+    printf("3.Way_3: use of an operation ? \n");
+    printf("Enter you choose : ");
+    scanf("%d", &num_in_switch);
+
+    switch (num_in_switch){
+    case '1' :
+   if ((x<0 && y<0 && x*x+y*y<1) || ( x>0 && y>0 && x*x+y*y<1 && x>y*y) || (x>0 && y<0 && x*x+y*y>1 && x>y*y))
+   {
+       printf("This point fall into");
+   }
+   else {
+    printf("This point does't fall into!!!");
+   }
+      break;
+
+    case '2' :
+        t =((x<0 && y<0 && x*x+y*y<1) || ( x>0 && y>0 && x*x+y*y<1 && x>y*y) || (x>0 && y<0 && x*x+y*y>1 && x>y*y));
+    if(t) {
+        printf("This point fall into");
+    }
+    else{
+        printf("This point does't fall into!!!");
+    }
+    break;
+
+    case '3' :
+        t = ((x<0 && y<0 && x*x+y*y<1) || ( x>0 && y>0 && x*x+y*y<1 && x>y*y) || (x>0 && y<0 && x*x+y*y>1 && x>y*y)) ? printf("This point fall into") : printf("This point does't fall into!!!");
+
+        break;
+
+    default:
+        if ((x<0 && y<0 && x*x+y*y<1) || ( x>0 && y>0 && x*x+y*y<1 && x>y*y) || (x>0 && y<0 && x*x+y*y>1 && x>y*y))
+   {
+       printf("This point fall into\n");
+   }
+   else {
+    printf("This point does't fall into!!!");
+   }
+
+   t =((x<0 && y<0 && x*x+y*y<1) || ( x>0 && y>0 && x*x+y*y<1 && x>y*y) || (x>0 && y<0 && x*x+y*y>1 && x>y*y));
+    if(t) {
+        printf("");
+    }
+    else{
+        printf("");
+    }
+    t = ((x<0 && y<0 && x*x+y*y<1) || ( x>0 && y>0 && x*x+y*y<1 && x>y*y) || (x>0 && y<0 && x*x+y*y>1 && x>y*y)) ? printf("") : printf("");
+
+        break;
+
+    }
+
+    return 0;
+}
