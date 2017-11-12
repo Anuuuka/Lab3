@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+    double x, a, y;
+    float pi=3.14;
+    printf("Enter number x= ");
+    scanf("%lf", &x);
+
+     if(x>0)
+     {
+         if(x<2)
+         {
+             a = x+3.5-sin(x+1);
+             y = sin(a+x)-(cos(x)/(x-8));
+             printf(" y= %lf" , y);
+         }
+         else{
+            if(x<=pi)
+            {
+                a = x+3;
+                y = sin(a+x)-(cos(x)/(x-8));
+                 printf( "y= %lf", y);
+            }
+            else{
+                    if(x!=6 && x!=8)
+                    {
+                         a = (x+4)/(x-6);
+                y = sin(a+x)-(cos(x)/(x-8));
+                 printf( "y= %lf", y);
+                    }
+                    else {
+                            printf("y function does not exist!!");
+                    }
+            }
+         }
+     }
+     else{
+        printf ("Error!!");
+     }
+    return 0;
+}
